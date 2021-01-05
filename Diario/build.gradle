@@ -1,0 +1,37 @@
+ext {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility1 = targetCompatibility
+    targetCompatibility2 = targetCompatibility1
+    sourceCompatibility1 = JavaVersion.VERSION_1_8
+    targetCompatibility3 = JavaVersion.VERSION_1_8
+}// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        sourceCompatibility = JavaVersion.VERSION_1_6
+    }
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+
+        // compile 'com.github.PhilJay:MpAndroidChart:v3.0.2'
+        classpath "com.android.tools.build:gradle:4.1.1"
+
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

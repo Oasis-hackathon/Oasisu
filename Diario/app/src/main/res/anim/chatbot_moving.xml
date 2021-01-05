@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:repeatCount="infinite"
+    android:repeatMode="reverse"
+    android:interpolator="@android:anim/linear_interpolator"
+    android:fillAfter="true">
+
+    <translate
+        android:duration="2000"
+        android:fillAfter="true"
+        android:startOffset="300"
+        android:toXDelta="300"
+        android:toYDelta="200" />
+
+    <translate
+        android:duration="2000"
+        android:startOffset="2300"
+        android:fillAfter="true"
+        android:toXDelta="-100"
+        android:toYDelta="200" />
+
+    <translate
+        android:duration="2000"
+        android:startOffset="4300"
+        android:fillAfter="true"
+        android:toXDelta="200"
+        android:toYDelta="100" />
+
+
+    <translate
+        android:duration="2000"
+        android:startOffset="6300"
+        android:fillAfter="true"
+        android:toXDelta="-200"
+        android:toYDelta="100" />
+
+    <translate
+        android:duration="2000"
+        android:startOffset="6300"
+        android:fillAfter="true"
+        android:toXDelta="-200"
+        android:toYDelta="-100" />
+
+    <translate
+        android:duration="2000"
+        android:startOffset="8300"
+        android:fillAfter="true"
+        android:toXDelta="-50"
+        android:toYDelta="-500" />
+
+    <scale
+        android:startOffset="2000"
+        android:fillAfter="true"
+        android:duration="2000"
+        android:fromXScale="1.0"
+        android:fromYScale="1.0"
+        android:toXScale="1.5"
+        android:toYScale="1.5"
+        />
+
+    <rotate
+        android:startOffset="40"
+        android:fillAfter="true"
+        android:duration="2000"
+        android:fromDegrees="0"
+        android:toDegrees="-10"
+        />
+</set>
+
+

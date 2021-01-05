@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Chatbot.ChatbotFragment"
+    android:background="@color/white"
+    android:clickable="true"
+    android:windowSoftInputMode="adjustPan"
+    android:id="@+id/fragment_chatbot">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFBF6"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:fontFamily="@font/dosmyungjo"
+            android:padding="20dp"
+            android:text="도서관"
+            android:textAlignment="center"
+            android:textSize="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/libraryback"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/EmotionGraph"
+                    android:layout_width="180dp"
+                    android:layout_height="137dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/graphimage" />
+
+                <ImageView
+                    android:id="@+id/ChatbotInHouse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/chatbotmove">
+
+                </ImageView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_shape">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/EmotionCountRecyclerView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:foregroundGravity="center"
+                            android:overScrollMode="never"
+                            android:padding="5dp">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/repository"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="2"
+                        app:srcCompat="@drawable/bookshelfimage">
+
+                    </ImageView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:background="@drawable/chatimage"
+                android:id="@+id/chatbotAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/dosmyungjo" />
+
+            <ImageView
+                android:id="@+id/chatbotlodding2"
+                android:visibility="invisible"
+                android:src="@drawable/chatbotmove"
+                android:layout_gravity="right"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/chatbotQuestion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:fontFamily="@font/dosmyungjo"
+                    android:hint="오늘은 무슨일이 있었나요?"
+                    android:theme="@style/EditTheme"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/chatbotQuestionButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/dosmyungjo"
+                    android:text="전송"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

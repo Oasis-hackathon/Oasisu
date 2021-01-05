@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="org.techtown.mydiarytop.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_repository"
+        android:name="org.techtown.mydiarytop.ui.Repository.RepositoryFragment"
+        android:label="@string/title_repository"
+        tools:layout="@layout/fragment_repository" />
+
+    <fragment
+        android:id="@+id/navigation_diary"
+        android:name="org.techtown.mydiarytop.ui.Diary.DiaryFragment"
+        android:label="@string/title_diary"
+        tools:layout="@layout/fragment_diary" />
+</navigation>

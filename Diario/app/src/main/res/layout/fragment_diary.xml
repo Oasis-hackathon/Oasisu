@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_diary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3A0518"
+    android:backgroundTint="#554039"
+    android:clickable="true"
+    android:windowSoftInputMode="adjustNothing"
+    tools:context=".ui.Diary.DiaryFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/diraybackground"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/chatbotlodding"
+            android:layout_gravity="right"
+            android:visibility="invisible"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/chatbotmove" />
+
+        <TextView
+            android:id="@+id/todayDate"
+            android:fontFamily="@font/dosmyungjo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="YYYY년 MM월 mm일"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/totalDiaryCountText"
+            android:fontFamily="@font/dosmyungjo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="몇번째 일기"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:theme="@style/EditTheme"
+                android:fontFamily="@font/dosmyungjo"
+                android:id="@+id/diaryTitleInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="21dp"
+                android:hint="제목을 작성해주세요!" />
+
+            <EditText
+                android:theme="@style/EditTheme"
+                android:fontFamily="@font/dosmyungjo"
+                android:id="@+id/diaryWriteInput"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:hint="일기를 작성해주세요!" />
+
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/SaveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:foreground="@drawable/savebuttonimage" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_repository"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_repository" />
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_diary"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:iconTint="@color/black"
+        android:iconTintMode="src_in"
+        android:title="@string/title_diary" />
+
+</menu>
