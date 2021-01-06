@@ -103,7 +103,7 @@ public class ChatbotFragment extends Fragment {
             public void onClick(View view) {
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.nav_host_fragment, ((MainActivity)getActivity()).repositoryFragment).commitAllowingStateLoss();;
+                fragmentTransaction.replace(R.id.nav_host_fragment, ((MainActivity)getActivity()).repositoryFragment).commitAllowingStateLoss();
             }
         });
 
@@ -231,7 +231,7 @@ public class ChatbotFragment extends Fragment {
         });
 
         ArrayList<Integer> list = new ArrayList<Integer>();
-        Integer totalCount = ((MainActivity) getActivity()).totalDiaryCount + 1;
+        Integer totalCount = ((MainActivity) getActivity()).totalDiaryCount;
 
         for(int i = 0; i < 6; i++){
             System.out.println(totalCount);
@@ -298,11 +298,22 @@ public class ChatbotFragment extends Fragment {
                     // Set the result
                     String result = builder.toString();
                     System.out.println(result);
+                    //String str = result.split(".")[0] + result.split(".")[1];
 
                     chatbotHandler.post(new Runnable() {
                         @Override
                         public void run() {
-                            String str = '\n'+ result;
+
+
+                            String[] array = result.split("[.]");
+
+                            for(int i=0;i<array.length;i++) {
+                                System.out.println(array[i]);
+                            }
+
+
+                            String str = array[0] +". " + array[1];
+
                             chatbotAnswer.setText(str);
                             ((MainActivity)getActivity()).floatingChatbot.hide();
                             chatbotloding2.setVisibility(View.INVISIBLE);

@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         initializeValue();
 
         mediaPlayer = MediaPlayer.create(this, R.raw.music);
-        //mediaPlayer.setLooping(true); //무한재생
+        mediaPlayer.setLooping(true); //무한재생
         mediaPlayer.start();
         /*
         BottomNavigationView navView = findViewById(R.id.nav_view);
