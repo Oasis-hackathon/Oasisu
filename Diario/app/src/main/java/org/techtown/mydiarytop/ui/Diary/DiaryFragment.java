@@ -106,7 +106,8 @@ public class DiaryFragment extends Fragment {
 
         todayDate.setText(day);
 
-        Integer totalDiaryCount = ((MainActivity) getActivity()).totalDiaryCount + 1;
+        Integer totalDiaryCount = ((MainActivity) getActivity()).totalDiaryCount;
+        totalDiaryCount++;
         String totalDiaryCountStr = totalDiaryCount.toString() + "번째 일기";
         totalDiaryCountText.setText(totalDiaryCountStr);
 

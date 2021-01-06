@@ -129,16 +129,16 @@ public class GraphFragment extends Fragment {
         set1.setCircleColor(Color.GREEN);
         set1.setFillColor(Color.GREEN);
         set1.disableDashedLine();
-        set1.setLabel(null);
         set1.setValueTextSize(0.0f);
         set1.setDrawValues(false);
 
         emotionChart.getAxisLeft().setDrawGridLines(false);
         emotionChart.getXAxis().setDrawGridLines(false);
+        emotionChart.setDescription(null);
 
         // set data;
         emotionChart.setDrawGridBackground(false);
-        emotionChart.setOutlineSpotShadowColor(Color.GREEN);
+        //emotionChart.setOutlineSpotShadowColor(Color.GREEN);
         emotionChart.getLegend().setEnabled(false);
         emotionChart.getAxisRight().setEnabled(false);
         emotionChart.getAxisLeft().setEnabled(false);
